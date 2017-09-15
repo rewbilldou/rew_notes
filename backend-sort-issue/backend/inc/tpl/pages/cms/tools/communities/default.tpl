@@ -67,8 +67,8 @@ if (empty($authorized)) {
 					cursor: 'move',
 					forceHelperSize: true,
 					update: function(event, ui) {
-						var items = $(this).sortable('serialize');
-						// REWMOD - Bill Dou - 9/8/2017 - change from get to post since items is too long
+					var items = $(this).sortable('serialize');
+					// REWMOD - change from get to post since items is too long
                         // Note: if you are using a GET request there's a limit which will depend on the client browser
                         $.ajax({
                             url: '',

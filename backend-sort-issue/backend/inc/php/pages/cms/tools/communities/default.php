@@ -19,16 +19,16 @@ if (!empty($authorized)) {
 	$db = DB::get();
 
 	// AJAX request: update community order
-    // REWMOD - Bill Dou - 9/8/2017 - check post items not empty
+    	// REWMOD - check post items not empty
 	if (!empty($_POST['ajax']) && !empty($_POST['order']) && !empty($_POST['items'])) {
 
 		$order = 0;
-		// REWMOD - Ernest - 9/8/2017 - change from get to post otherwise get can not carry mass data
-        $pure_items = str_replace('items[]=', '', $_POST['items']);
+		// REWMOD - change from get to post otherwise get can not carry mass data
+        	$pure_items = str_replace('items[]=', '', $_POST['items']);
 
-        // Get array from pure string
-        $community_ids = explode('&', $pure_items);
-        // REWMOD - Ernest - 9/8/2017 - END
+        	// Get array from pure string
+        	$community_ids = explode('&', $pure_items);
+        	// REWMOD - END
 
 		if (!empty($community_ids) && is_array($community_ids)) {
 			$save_order = $db->prepare("UPDATE `featured_communities` SET `order` = :order WHERE `id` = :community_id;");
