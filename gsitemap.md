@@ -1,0 +1,1 @@
+`php /var/www/vhosts/dev.edmontonrealestate.net/app/httpdocs/backend/cron/gsitemap.php /var/www/vhosts/dev.edmontonrealestate.net/app/httpdocs www.edmontonrealestate.net`

@@ -2,22 +2,26 @@ Title         : how to use slick in rew site
 Author        : Bill Dou
 Date          : 9/21/2017
 
-[TITLE]
+# How to use slick in rew site
 
-# Create init JS file 
+## Create init JS file 
 
 In skin JS directory (like *`/httpdocs/inc/skins/pt-1r/js/slick.init.js`*), create a file named `slick.init.js`, 
 then go to *`/httpdocs/inc/classes/Skin/BREW.php`*, in `construct` function, add 
-```$this->addJavascript('js/slick.min.js');
-$this->addJavascript('js/slick.init.js');```
+```
+$this->addJavascript('js/slick.min.js');
+$this->addJavascript('js/slick.init.js');
+```
 
-# CSS
+## CSS
 Go to skin misc header.tpl like *`httpdocs/inc/skins/pt-1r/tpl/misc/header.tpl.php`*
 
-```<link rel="stylesheet" type="text/css" href="<?=$path; ?>/css/slick.css"/>```
-```<link rel="stylesheet" type="text/css" href="<?=$path; ?>/css/slick-theme.css"/>```
+```
+<link rel="stylesheet" type="text/css" href="<?=$path; ?>/css/slick.css"/>
+<link rel="stylesheet" type="text/css" href="<?=$path; ?>/css/slick-theme.css"/>
+```
 
-# demo
+## demo
 
 ```javascript
 $(document).ready(function(){
